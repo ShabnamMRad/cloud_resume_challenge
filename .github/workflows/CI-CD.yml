@@ -21,4 +21,4 @@ jobs:
           aws-region: 'eu-central-1'
 
       - name: Upload file to S3
-        run: aws s3 cp website s3://shabnam-cv-cloud-challenge
+        run: aws s3 cp website s3://shabnam-cv-cloud-challenge/*
