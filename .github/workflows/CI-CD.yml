@@ -20,5 +20,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'eu-central-1'
 
-      - name: Upload file to S3
-        run: aws s3 cp website s3://shabnam-cv-cloud-challenge/*
+      - name: Upload index.html to S3
+        run: aws s3 cp website/index.html s3://shabnam-cv-cloud-challenge/index.html
+
+      - name: Upload script.js to S3
+        run: aws s3 cp website/script.js s3://shabnam-cv-cloud-challenge/script.js
+
+      - name: Upload styles.css to S3
+        run: aws s3 cp website/styles.css s3://shabnam-cv-cloud-challenge/styles.css
